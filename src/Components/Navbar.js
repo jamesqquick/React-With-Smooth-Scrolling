@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "../logo.svg";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default class Navbar extends Component {
   render() {
@@ -13,14 +14,73 @@ export default class Navbar extends Component {
             onClick={this.scrollToTop}
           />
           <ul className="nav-items">
-            <li className="nav-item">Section 1</li>
-            <li className="nav-item">Section 2</li>
-            <li className="nav-item">Section 3</li>
-            <li className="nav-item">Section 4</li>
-            <li className="nav-item">Section 5</li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section1"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Section 1
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section2"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Section 2
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section3"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Section 3
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section4"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Section 4
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section5"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Section 5
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
     );
   }
+
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 }

@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
+    "react-scripts": "2.0.5",
+    "react-scroll": "^1.7.10"
   },
   "scripts": {
     "start": "react-scripts start",
